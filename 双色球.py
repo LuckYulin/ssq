@@ -34,9 +34,9 @@ def sav_to_mysql(a1,a2,a3,a4,a5,a6):
     print(a1,a2,a3,a4,a5,a6)
     with conn:
         try:
-            course = conn.cursor()
+            cursor = conn.cursor()
             sql = 'insert into suanseqiu (YEAR ,MONTH,NO,BONUS,menbers1,menbers2)values(%s,%s,%s,%s,%s,%s)'
-            course.execute(sql,(a1,a2,a3,a4,a5,a6))
+            cursor.execute(sql,(a1,a2,a3,a4,a5,a6))
             conn.commit()
         except Exception as e:
             print('异常',e)
