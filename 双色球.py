@@ -49,3 +49,4 @@ if __name__ == '__main__':
     print('存储完毕')
     if conn:
         conn.close()
+
